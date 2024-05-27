@@ -1,0 +1,16 @@
+<!-- src/main/resources/templates/dashboard.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+<h1>Available Houses</h1>
+<ul>
+    <li th:each="house : ${houses}">
+        <span th:text="${house.address}"></span>
+        <a th:href="@{/directions(lat=${house.latitude},lon=${house.longitude})}">Get Directions</a>
+    </li>
+</ul>
+</body>
+</html>
