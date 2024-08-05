@@ -1,0 +1,24 @@
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: LocationApp
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/maps
+    username: dev
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      dialect: org.hibernate.dialect.MySQLDialect
+
+google:
+  maps:
+    api:
+      key: AIzaSyA4piTdQgvmV0PTkKec9NnEK1lMNvW9aaM
